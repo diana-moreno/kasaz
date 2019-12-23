@@ -1,15 +1,14 @@
 const { Router } = require('express')
 const { listApartments } = require('../../logic')
-const bodyParser = require('body-parser')
 const { errors: { NotFoundError, ConflictError, CredentialsError } } = require('kasaz-utils')
-const jsonBodyParser = bodyParser.json()
 const router = Router()
 
 
-router.get('/', jsonBodyParser, (req, res) => {
+router.get('/', (req, res) => {
   try {
-  const { body: { location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms} } = req
-    listApartments(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms)
+  const { query: { location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms} } = req
+
+    listApartments(location, Number(minPrice), Number(maxPrice), Number(minSqm), Number(maxSqm), Number(bedrooms), Number(bathrooms))
       .then(apartments => res.json({ apartments }))
       .catch(error => {
         const { message } = error
