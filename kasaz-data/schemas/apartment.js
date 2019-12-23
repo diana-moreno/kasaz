@@ -1,23 +1,33 @@
 const { Schema } = require('mongoose')
 
 module.exports = new Schema({
+  location: {
+    type: String,
+    require: true
+  },
   title: {
-    type: String
+    type: String,
+    require: true
   },
   price: {
-    type: Number
+    type: Number,
+    require: true
   },
   sqm: {
-    type: Number
+    type: Number,
+    require: true
   },
   bedrooms: {
-    type: Number
+    type: Number,
+    require: true
   },
   bathrooms: {
-    type: Number
+    type: Number,
+    require: true
   },
   picture: {
-    type: String
+    type: String,
+    require: true
   }
 
 })
