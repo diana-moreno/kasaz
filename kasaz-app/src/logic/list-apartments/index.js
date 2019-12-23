@@ -1,14 +1,11 @@
 import call from '../../utils/call'
-const { validate, errors: { NotFoundError, ContentError } } = require('kasaz-utils')
+const { validate, errors: { NotFoundError } } = require('kasaz-utils')
 const API_URL = process.env.REACT_APP_API_URL
 
 export default function(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms) {
 
   // sincronous validation
-  // location is the only required param
-  validate.string(location)
-  if(!location) throw new ContentError(`Please, insert a location.`)
-
+  location &&validate.string(location)
   minPrice && validate.number(minPrice)
   maxPrice && validate.number(maxPrice)
   minSqm && validate.number(minSqm)

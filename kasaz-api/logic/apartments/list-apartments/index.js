@@ -15,6 +15,7 @@ module.exports = function(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms
   return (async () => {
 
     // set default values if undefined is received
+    if (!location) location = 'Barcelona'
     if (!minPrice) minPrice = 0
     if (!maxPrice) maxPrice = Number.MAX_SAFE_INTEGER
     if (!minSqm) minSqm = 0
