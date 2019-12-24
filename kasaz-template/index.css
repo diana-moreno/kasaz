@@ -1,0 +1,211 @@
+html, body {
+  height: 100%;
+  color: #495057;
+  font-family: "Roboto Light", sans-serif;
+  margin: 0;
+}
+
+.logo {
+  width: 13rem;
+  padding: 1rem 3rem;
+}
+
+input[type=radio] {
+  visibility: hidden;
+}
+
+.navbar {
+  height: 5rem;
+  background: #9C27B0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__input {
+  font-size: 1rem;
+  width: 27rem;
+  border: 0;
+  padding: 0.7rem;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-left: 1rem;
+}
+.navbar__button {
+  justify-content: center;
+  background: #41af68;
+  color: white;
+  font-size: 1.2rem;
+  border: 0;
+  padding: 0.6rem;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.navbar__filters {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #e3e3e3;
+  background: #aa32c312;
+  flex-wrap: wrap;
+}
+.navbar__filters section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.navbar__filters section p {
+  color: #495057;
+  font-weight: 700;
+}
+.navbar__filters section div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 2rem;
+}
+.navbar__filters section div select {
+  width: 7rem;
+  border-radius: 7px;
+  padding: 0.7rem;
+  background: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.5rem;
+  border: 1px solid #e3e3e3;
+}
+.navbar__filters section ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  color: #222222;
+  margin: 0;
+}
+.navbar__filters section ul li {
+  border: 1px solid #e3e3e3;
+  padding: 0.2rem 0;
+  background: white;
+  width: 3rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  position: relative;
+  cursor: pointer;
+}
+.navbar__filters section ul li label {
+  position: absolute;
+  cursor: pointer;
+}
+
+.right-corner {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.left-corner {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+#selected {
+  background-color: #41af68;
+  color: white;
+}
+
+article {
+  max-width: 25rem;
+  height: 26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  border: 1px solid #e3e3e3;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+  padding: 1rem;
+}
+.board li {
+  list-style: none;
+}
+
+.card {
+  max-width: 25rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  border: 1px solid #e3e3e3;
+}
+.card__image {
+  height: 70%;
+  width: 100%;
+  background: #f9e7af;
+  position: relative;
+}
+.card__image img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.card__price {
+  position: absolute;
+  bottom: 0;
+  background: #ffffffab;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+}
+.card__price-total {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.card__title {
+  height: 20%;
+  text-align: center;
+  color: #9c3db0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__title h3 {
+  font-size: 1.3rem;
+}
+.card__features {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  border-top: 1px solid #e3e3e3;
+}
+.card__features div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+}
+
+@media only screen and (min-width: 576px) {
+  .logo {
+    width: 18rem;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
