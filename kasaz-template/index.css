@@ -5,18 +5,18 @@ html, body {
   margin: 0;
 }
 
+input[type=radio] {
+  visibility: hidden;
+}
+
 .logo {
   width: 13rem;
   padding: 1rem 3rem;
 }
 
-input[type=radio] {
-  visibility: hidden;
-}
-
 .navbar {
   height: 5rem;
-  background: #9C27B0;
+  background: #722aa0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,17 +121,6 @@ input[type=radio] {
   color: white;
 }
 
-article {
-  max-width: 25rem;
-  height: 26rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-  border: 1px solid #e3e3e3;
-}
-
 .board {
   display: flex;
   flex-wrap: wrap;
@@ -155,7 +144,6 @@ article {
 .card__image {
   height: 70%;
   width: 100%;
-  background: #f9e7af;
   position: relative;
 }
 .card__image img {
@@ -179,7 +167,7 @@ article {
 .card__title {
   height: 20%;
   text-align: center;
-  color: #9c3db0;
+  color: #722aa0;
   display: flex;
   justify-content: center;
   align-items: center;
