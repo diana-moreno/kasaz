@@ -26,7 +26,7 @@ export default function({ onListApartments }) {
   return <>
     <form onSubmit={handleSubmit}>
       <div className='navbar'>
-        <input className='navbar__input' type="text" name='location' placeholder="Introduce ciudad o barrio" />
+        <input className='navbar__input' type="text" name='location' placeholder="Barcelona"/>
         <button className='navbar__button'>Buscar</button>
       </div>
       <div className='navbar__filters'>
