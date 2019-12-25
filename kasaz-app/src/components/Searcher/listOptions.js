@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import constants from './constants'
 const { prices,  sqms } = constants
 
@@ -16,23 +16,14 @@ export default function ({ name, description, isSqm, isPrice, onMin, minIndex}) 
       <option>{description}</option>
       {isSqm && sqms
         .slice(minIndex, sqms.length - 1)
-        .map(sqm =>
-        <option value={sqm}>{sqm} m²</option>
+        .map((sqm, i) =>
+        <option key={i} value={sqm}>{sqm} m²</option>
       )}
       {isPrice && prices
         .slice(minIndex, prices.length - 1)
-        .map(price =>
-        <option value={price}>{price} €</option>
+        .map((price, i) =>
+        <option key={i} value={price}>{price} €</option>
       )}
     </select>
   </>
 }
-
-
-
-
-
-
-
-
-

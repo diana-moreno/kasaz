@@ -7,6 +7,8 @@ export default function ({ description, onNumberSelected }) {
     onNumberSelected(number)
   }, [number])
 
+  function handleNumber(event) { setNumber(event.target.value) }
+
   return <>
     <section>
       <p>{description}</p>
@@ -17,9 +19,7 @@ export default function ({ description, onNumberSelected }) {
             name={`${description}-quantity`}
             type='radio'
             value='Todos'
-            onChange={(event) => {
-              setNumber(event.target.value)
-            }}
+            onChange={handleNumber}
             checked={number === 'Todos'}
           />
           <label className='left-corner' htmlFor={`${description}-todos`}>
@@ -32,9 +32,7 @@ export default function ({ description, onNumberSelected }) {
             name={`${description}-quantity`}
             type='radio'
             value='1'
-            onChange={(event) => {
-              setNumber(event.target.value)
-            }}
+            onChange={handleNumber}
           />
           <label htmlFor={`${description}-1`}>1</label>
         </li>
@@ -44,9 +42,7 @@ export default function ({ description, onNumberSelected }) {
             name={`${description}-quantity`}
             type='radio'
             value='2'
-            onChange={(event) => {
-              setNumber(event.target.value)
-            }}
+            onChange={handleNumber}
           />
           <label htmlFor={`${description}-2`}>2</label>
         </li>
@@ -56,9 +52,7 @@ export default function ({ description, onNumberSelected }) {
             name={`${description}-quantity`}
             type='radio'
             value='3'
-            onChange={(event) => {
-              setNumber(event.target.value)
-            }}
+            onChange={handleNumber}
           />
           <label htmlFor={`${description}-3`}>3</label>
         </li>
@@ -68,9 +62,7 @@ export default function ({ description, onNumberSelected }) {
             name={`${description}-quantity`}
             type='radio'
             value='4'
-            onChange={(event) => {
-              setNumber(event.target.value)
-            }}
+            onChange={handleNumber}
           />
           <label htmlFor={`${description}-4`}>4</label>
         </li>
@@ -80,11 +72,9 @@ export default function ({ description, onNumberSelected }) {
             name={`${description}-quantity`}
             type='radio'
             value='5'
-            onChange={(event) => {
-              setNumber(event.target.value)
-            }}
+            onChange={handleNumber}
           />
-          <label  className='right-corner' htmlFor={`${description}-5`}>
+          <label className='right-corner' htmlFor={`${description}-5`}>
             5
           </label>
         </li>
@@ -92,12 +82,3 @@ export default function ({ description, onNumberSelected }) {
     </section>
   </>
 }
-
-
-
-
-
-
-
-
-

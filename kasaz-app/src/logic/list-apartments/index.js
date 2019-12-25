@@ -1,5 +1,5 @@
 import call from '../../utils/call'
-const { validate, errors: { NotFoundError } } = require('kasaz-utils')
+const { errors: { NotFoundError } } = require('kasaz-utils')
 const API_URL = process.env.REACT_APP_API_URL
 
 export default function(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms) {

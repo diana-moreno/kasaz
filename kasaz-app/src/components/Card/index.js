@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.sass'
 
 export default function({ apartment }) {
@@ -9,7 +9,7 @@ export default function({ apartment }) {
     <li>
       <article className='card'>
         <div className='card__image'>
-          <img src='https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg' />
+          <img src={picture} alt='flat' />
           <div className='card__price'>
             <p className='card__price-total'>{price} €</p>
             <p>{relativePrice} €/m²</p>
