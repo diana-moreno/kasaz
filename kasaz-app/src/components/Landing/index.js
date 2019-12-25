@@ -10,9 +10,12 @@ export default function () {
   const [apartments, setApartments] = useState([])
 
   async function handleListApartments(location, minPrice, maxPrice, minSqm, maxSqm) {
-  const apartments = await listApartments(location, minPrice, maxPrice, minSqm, maxSqm)
-  setApartments(apartments)
-  console.log(apartments)
+    try {
+      const apartments = await listApartments(location, minPrice, maxPrice, minSqm, maxSqm)
+      setApartments(apartments)
+    } catch(error) {
+      setError(error.message)
+    }
   }
 
   return <>
