@@ -13,7 +13,6 @@ export default function ({ description, onNumberSelected }) {
       <ul>
         <li className='left-corner'>
           <input
-
             id={`${description}-todos`}
             name={`${description}-quantity`}
             type='radio'
