@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import constants from './constants'
 const { prices,  sqms } = constants
-export default function ({ description, isSqm, isPrice }) {
+export default function ({ name, description, isSqm, isPrice }) {
 
   useEffect(() => {
   }, [])
 
   return <>
-    <select>
-      <option value="">{description}</option>
+    <select name={name}>
+      <option>{description}</option>
       {isSqm && sqms.map(sqm =>
         <option value={sqm}>{sqm} m²</option>
       )}

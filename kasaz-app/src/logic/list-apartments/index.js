@@ -4,18 +4,8 @@ const API_URL = process.env.REACT_APP_API_URL
 
 export default function(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms) {
 
-  // sincronous validation
-  location &&validate.string(location)
-  minPrice && validate.number(minPrice)
-  maxPrice && validate.number(maxPrice)
-  minSqm && validate.number(minSqm)
-  maxSqm && validate.number(maxSqm)
-  bedrooms && validate.number(bedrooms)
-  bathrooms && validate.number(bathrooms)
-
   return (async () => {
-
-    // building the queryString avoiding undefined values
+    // building the queryString avoiding undefined or null values
     let string = '/?'
 
     if(location) string += `location=${location}&`
