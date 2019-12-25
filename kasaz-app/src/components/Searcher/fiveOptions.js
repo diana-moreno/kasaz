@@ -11,7 +11,7 @@ export default function ({ description, onNumberSelected }) {
     <section>
       <p>{description}</p>
       <ul>
-        <li className='left-corner'>
+        <li>
           <input
             id={`${description}-todos`}
             name={`${description}-quantity`}
@@ -22,7 +22,9 @@ export default function ({ description, onNumberSelected }) {
             }}
             checked={number === 'Todos'}
           />
-          <label htmlFor={`${description}-todos`}>Todos</label>
+          <label className='left-corner' htmlFor={`${description}-todos`}>
+            Todos
+          </label>
         </li>
         <li>
           <input
@@ -72,7 +74,7 @@ export default function ({ description, onNumberSelected }) {
           />
           <label htmlFor={`${description}-4`}>4</label>
         </li>
-        <li className='right-corner'>
+        <li>
           <input
             id={`${description}-5`}
             name={`${description}-quantity`}
@@ -82,7 +84,9 @@ export default function ({ description, onNumberSelected }) {
               setNumber(event.target.value)
             }}
           />
-          <label htmlFor={`${description}-5`}>5</label>
+          <label  className='right-corner' htmlFor={`${description}-5`}>
+            5
+          </label>
         </li>
       </ul>
     </section>
