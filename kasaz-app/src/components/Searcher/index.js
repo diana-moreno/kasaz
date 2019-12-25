@@ -5,18 +5,28 @@ import ListOptions from './listOptions'
 import listApartments from '../../logic/list-apartments'
 
 export default function({ onListApartments }) {
+  const [bedrooms, setBedrooms] = useState()
+  const [bathrooms, setBathrooms] = useState()
 
   function handleSubmit(event) {
     event.preventDefault()
     const { location: { value: location }, minPrice: { value: minPrice }, maxPrice: { value: maxPrice }, minSqm: { value: minSqm }, maxSqm: { value: maxSqm }, } = event.target
 
-    onListApartments(location, minPrice, maxPrice, minSqm, maxSqm)
+    onListApartments(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms)
+  }
+
+  function handleBedrooms(number) {
+    setBedrooms(number)
+  }
+
+  function handleBathrooms(number) {
+    setBathrooms(number)
   }
 
   return <>
     <form onSubmit={handleSubmit}>
       <div className='navbar'>
-        <input className='navbar__input' type="text" name='location' placeholder="Introduce ciudad o barrio"/>
+        <input className='navbar__input' type="text" name='location' placeholder="Introduce ciudad o barrio" />
         <button className='navbar__button'>Buscar</button>
       </div>
       <div className='navbar__filters'>
@@ -36,8 +46,8 @@ export default function({ onListApartments }) {
             <ListOptions name='maxSqm' description='Max m²' isSqm={true} isPrice={false} />
           </div>
         </section>
-        <FiveOptions description='HABITACIONES' />
-        <FiveOptions description='BAÑOS' />
+        <FiveOptions description='HABITACIONES' onNumberSelected={handleBedrooms} />
+        <FiveOptions description='BAÑOS' onNumberSelected={handleBathrooms}/>
       </div>
     </form>
   </>

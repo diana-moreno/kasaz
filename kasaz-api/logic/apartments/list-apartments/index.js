@@ -37,7 +37,7 @@ module.exports = function(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms
       apartments = await Apartment.find({ location: { $regex: location, $options: 'i' }, price: { $gt: minPrice, $lt: maxPrice }, sqm: { $gt: minSqm, $lt: maxSqm }, bedrooms, bathrooms }, { __v: 0 }).lean()
     }
 
-    if (apartments.length === 0) throw new NotFoundError(`We are sorry! There are no results.`)
+    if (apartments.length === 0) throw new NotFoundError(`Lo sentimos! No hemos encontrado resultados.`)
 
     return apartments
   })()

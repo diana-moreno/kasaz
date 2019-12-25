@@ -9,9 +9,12 @@ export default function () {
   const [error, setError] = useState()
   const [apartments, setApartments] = useState([])
 
-  async function handleListApartments(location, minPrice, maxPrice, minSqm, maxSqm) {
+  async function handleListApartments(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms) {
+    setError()
+    setApartments([])
+
     try {
-      const apartments = await listApartments(location, minPrice, maxPrice, minSqm, maxSqm)
+      const apartments = await listApartments(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms)
       setApartments(apartments)
     } catch(error) {
       setError(error.message)
