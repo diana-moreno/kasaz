@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Route, withRouter } from 'react-router-dom'
-import './index.sass'
+import { Route } from 'react-router-dom'
 import listApartments from '../../logic/list-apartments'
+import Landing from '../Landing'
 
 export default function () {
   const [apartments, setApartments] = useState([])
@@ -22,19 +22,7 @@ export default function () {
   }, [])
 
   return <>
-    <ul>
-    {apartments.map(apartment =>
-      <li>
-        <h1>{apartment.title}</h1>*
-        <p>{apartment.price} €</p>
-        <p>{apartment.sqm} m²</p>
-        <p>{apartment.bedrooms} dormitorios</p>
-        <p>{apartment.bathrooms} baños</p>
-        <p>{Math.round(apartment.price / apartment.sqm)} €/m²</p>
+     <Route exact path='/' render={() => <Landing />} />
 
-        <img src={apartment.picture} />
-      </li>
-    )}
-    </ul>
   </>
 }

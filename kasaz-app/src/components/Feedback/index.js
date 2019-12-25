@@ -1,13 +1,10 @@
 import React from 'react'
 import './index.sass'
 
-export default function({ error, message }) {
-  const baseClassName = 'feedback__message feedback__message'
+export default function({ error }) {
   return (
     <section className="feedback">
-      <p className={`${baseClassName}--${error ? 'error': 'success'}`}>
-        {message}
-      </p>
+      <p className='feedback__message'>{error}</p>
     </section>
   )
 }
