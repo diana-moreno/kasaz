@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.sass'
 import listApartments from '../../logic/list-apartments'
 import Searcher from '../Searcher'
@@ -8,6 +8,18 @@ import Feedback from '../Feedback'
 export default function () {
   const [error, setError] = useState()
   const [apartments, setApartments] = useState([])
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const apartments = await listApartments()
+        setApartments(apartments)
+      } catch(error) {
+        setError(error.message)
+      }
+    })()
+  }, [])
+
 
   async function handleListApartments(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, bathrooms) {
     setError()
