@@ -2,7 +2,7 @@ require('dotenv').config()
 const { env: { TEST_DB_URL } } = process
 const { expect } = require('chai')
 const listApartments = require('.')
-const { random, floor } = Math
+const { random } = Math
 const { database, models: { Apartment } } = require('kasaz-data')
 const { validate, errors: { NotfoundError } } = require('kasaz-utils')
 
