@@ -23,18 +23,18 @@ module.exports = function(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms
 
     let apartments
 
-    apartments = await Apartment.find({ location: { $regex: location, $options: 'i' }, price: { $gt: minPrice, $lt: maxPrice }, sqm: { $gt: minSqm, $lt: maxSqm } }, { __v: 0 }).lean()
+    apartments = await Apartment.find({ location: { $regex: location, $options: 'i' }, price: { $gte: minPrice, $lte: maxPrice }, sqm: { $gte: minSqm, $lte: maxSqm } }, { __v: 0 }).lean()
 
     if (bedrooms && !bathrooms) {
-      apartments = await Apartment.find({ location: { $regex: location, $options: 'i' }, price: { $gt: minPrice, $lt: maxPrice }, sqm: { $gt: minSqm, $lt: maxSqm }, bedrooms }, { __v: 0 }).lean()
+      apartments = await Apartment.find({ location: { $regex: location, $options: 'i' }, price: { $gte: minPrice, $lte: maxPrice }, sqm: { $gte: minSqm, $lte: maxSqm }, bedrooms }, { __v: 0 }).lean()
     }
 
     if (bathrooms && !bedrooms) {
-      apartments = await Apartment.find({ location: { $regex: location, $options: 'i' }, price: { $gt: minPrice, $lt: maxPrice }, sqm: { $gt: minSqm, $lt: maxSqm }, bathrooms }, { __v: 0 }).lean()
+      apartments = await Apartment.find({ location: { $regex: location, $options: 'i' }, price: { $gte: minPrice, $lte: maxPrice }, sqm: { $gte: minSqm, $lte: maxSqm }, bathrooms }, { __v: 0 }).lean()
     }
 
     if (bathrooms && bedrooms) {
-      apartments = await Apartment.find({ location: { $regex: location, $options: 'i' }, price: { $gt: minPrice, $lt: maxPrice }, sqm: { $gt: minSqm, $lt: maxSqm }, bedrooms, bathrooms }, { __v: 0 }).lean()
+      apartments = await Apartment.find({ location: { $regex: location, $options: 'i' }, price: { $gte: minPrice, $lte: maxPrice }, sqm: { $gte: minSqm, $lte: maxSqm }, bedrooms, bathrooms }, { __v: 0 }).lean()
     }
 
     if (apartments.length === 0) throw new NotFoundError(`Lo sentimos, no hemos encontrado resultados.`)
