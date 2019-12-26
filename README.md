@@ -7,6 +7,8 @@
 Kasaz is a simple website to search for apartments.
 It's possible to search by location, price, sqm, number of bedrooms or bathdrooms.
 
+You can open it in your favorite device, whichever it is, because the design is responsive!
+
 ## Technical Description
 
 Frontend: React (javascript), CSS-SASS, BEM, Jest
