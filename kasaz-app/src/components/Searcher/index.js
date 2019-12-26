@@ -6,7 +6,8 @@ import ListOptions from './listOptions'
 export default function({ onListApartments }) {
   const [bedrooms, setBedrooms] = useState()
   const [bathrooms, setBathrooms] = useState()
-  const [minIndex, setMinIndex] = useState(0)
+  const [minPriceIndex, setMinPriceIndex] = useState(0)
+  const [minSqmIndex, setMinSqmIndex] = useState(0)
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -23,8 +24,12 @@ export default function({ onListApartments }) {
     setBathrooms(number)
   }
 
-  function handleMin(index) {
-    setMinIndex(index)
+  function handleMinPrice(index) {
+    setMinPriceIndex(index)
+  }
+
+  function handleMinSqm(index) {
+    setMinSqmIndex(index)
   }
 
   return <>
@@ -47,7 +52,7 @@ export default function({ onListApartments }) {
               description='Min €'
               isSqm={false}
               isPrice={true}
-              onMin={handleMin}
+              onMin={handleMinPrice}
             />
             <p>-</p>
             <ListOptions
@@ -55,8 +60,7 @@ export default function({ onListApartments }) {
               description='Max €'
               isSqm={false}
               isPrice={true}
-              minIndex={minIndex}
-              onMin={handleMin}
+              minIndex={minPriceIndex}
             />
           </div>
         </section>
@@ -68,7 +72,7 @@ export default function({ onListApartments }) {
               description='Min m²'
               isSqm={true}
               isPrice={false}
-              onMin={handleMin}
+              onMin={handleMinSqm}
             />
             <p>-</p>
             <ListOptions
@@ -76,8 +80,7 @@ export default function({ onListApartments }) {
               description='Max m²'
               isSqm={true}
               isPrice={false}
-              minIndex={minIndex}
-              onMin={handleMin}
+              minIndex={minSqmIndex}
             />
           </div>
         </section>
