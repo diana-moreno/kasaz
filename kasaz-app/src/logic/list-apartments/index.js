@@ -24,7 +24,6 @@ export default function(location, minPrice, maxPrice, minSqm, maxSqm, bedrooms, 
         'Content-Type': 'application/json'
       }
     })
-
     if (res.status === 200) return JSON.parse(res.body).apartments
     if (res.status === 404) throw new NotFoundError(JSON.parse(res.body).message)
     throw new Error(JSON.parse(res.body).message)
