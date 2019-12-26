@@ -10,9 +10,14 @@ export default function({ apartment }) {
       <article className='card'>
         <div className='card__image'>
           <img src={picture} alt='flat' />
-          <div className='card__price'>
-            <p className='card__price-total'>{price} €</p>
-            <p>{relativePrice} €/m²</p>
+          <div className='card__info'>
+            <div className='card__location'>
+              <p>{location}</p>
+            </div>
+            <div className='card__price'>
+              <p className='card__price-total'>{price} €  / </p>
+              <p>{relativePrice} €/m²</p>
+            </div>
           </div>
         </div>
         <div className='card__title'>
