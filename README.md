@@ -7,7 +7,7 @@
 Kasaz is a simple website to search for apartments.
 It's possible to search by location, price, sqm, number of bedrooms or bathdrooms.
 
-You can open it in your favorite device, whichever it is, because the design is responsive!
+You can run the deployed project here: https://diana-moreno.github.io/kasaz
 
 ## Technical Description
 
@@ -99,12 +99,17 @@ The folders '.env' are privated and included in '.gitignore' in a real proyect, 
 Swith the '#' to allow connect to test:
 
 from:
+```
 DB_URL = mongodb://localhost:27017/kasaz
 #DB_URL = mongodb://localhost:27017/kasaz-test
-
+```
 to:
+```
 #DB_URL = mongodb://localhost:27017/kasaz
 DB_URL = mongodb://localhost:27017/kasaz-test
+```
+
+There is an option to test it with a deployed version in Heroku, in this case, you has to disable the local options and enable the Heroku url.
 
 Run test:
 ➜  kasaz-app
