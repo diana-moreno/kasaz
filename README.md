@@ -109,8 +109,6 @@ to:
 DB_URL = mongodb://localhost:27017/kasaz-test
 ```
 
-There is an option to test it with a deployed version in Heroku, in this case, you has to disable the local options and enable the Heroku url.
-
 Run test:
 ➜  kasaz-app
   ```
