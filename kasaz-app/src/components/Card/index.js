@@ -4,8 +4,10 @@ import './index.sass'
 export default function({ apartment }) {
   const { location, title, price, sqm, bedrooms, bathrooms, picture } = apartment
   const relativePrice = parseInt(price / sqm)
+  const priceFormat = price.toLocaleString('de-DE')
+  const relativePriceFormat = relativePrice.toLocaleString('de-DE')
 
-  return <>
+  return < >
     <li>
       <article className='card'>
         <div className='card__image'>
@@ -15,8 +17,8 @@ export default function({ apartment }) {
               <p>{location}</p>
             </div>
             <div className='card__price'>
-              <p className='card__price-total'>{price} €  / </p>
-              <p>{relativePrice} €/m²</p>
+              <p className='card__price-total'>{priceFormat} €  / </p>
+              <p>{relativePriceFormat} €/m²</p>
             </div>
           </div>
         </div>
@@ -40,8 +42,6 @@ export default function({ apartment }) {
           </div>
         </div>
       </article>
-    </li>
-  </>
+    </li> <
+    />
 }
-
-
