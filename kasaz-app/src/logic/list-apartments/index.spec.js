@@ -1,4 +1,4 @@
-const { env: { REACT_APP_TEST_DB_URL: TEST_DB_URL, REACT_APP_TEST_SECRET: TEST_SECRET } } = process
+const { env: { REACT_APP_TEST_DB_URL: TEST_DB_URL } } = process
 import listApartments from '.'
 const { random } = Math
 const { database, models: { Apartment } } = require('kasaz-data')
