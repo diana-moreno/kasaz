@@ -1,373 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://kit.fontawesome.com/c0a664ee11.js"></script>
+    <title>Kasaz</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="index.css">
-  <script src="https://kit.fontawesome.com/c0a664ee11.js"></script>
-  <title>Kasaz</title>
-</head>
-
-<body>
-  <header>
-    <img class='logo' src="https://cdn-v2.kasaz.com/assets/logo-227e0bab21561a77c0c3b1156a8f40c39cc4c6c85a769aa758e81a054c56089b.svg">
-    <form action="">
-      <div class='navbar'>
-        <input class='navbar__input' type="text" placeholder="Introduce ciudad o barrio">
-        <button class='navbar__button'>Buscar</button>
-      </div>
-      <div class='navbar__filters'>
-        <section>
-          <p>PRECIO</p>
-          <div>
-            <select>
-              <option value="">Min €</option>
-              <option value="">0</option>
-              <option value="">25000</option>
-              <option value="">50000</option>
-              <option value="">75000</option>
-              <option value="">100000</option>
-            </select>
-            <p>-</p>
-            <select>
-              <option value="">Max €</option>
-              <option value="">0</option>
-              <option value="">25000</option>
-              <option value="">50000</option>
-              <option value="">75000</option>
-              <option value="">100000</option>
-            </select>
-          </div>
-        </section>
-        <section>
-          <p>TAMAÑO</p>
-          <div>
-            <select>
-              <option value="">Min m2</option>
-              <option value="">0</option>
-              <option value="">20</option>
-              <option value="">25</option>
-              <option value="">30</option>
-              <option value="">35</option>
-            </select>
-            <p>-</p>
-            <select>
-              <option value="">Max m2</option>
-              <option value="">0</option>
-              <option value="">20</option>
-              <option value="">25</option>
-              <option value="">30</option>
-              <option value="">35</option>
-            </select>
-          </div>
-        </section>
-        <section>
-          <p>HABITACIONES</p>
-          <ul>
-            <li class='left-corner' id='selected'>
-              <input type="radio">
-              <label for="">Todos</label>
-            </li>
-            <li>
-              <input type="radio">
-              <label for="">1</label>
-            </li>
-            <li>
-              <input type="radio">
-              <label for="">2</label>
-            </li>
-            <li>
-              <input type="radio">
-              <label for="">3</label>
-            </li>
-            <li>
-              <input type="radio">
-              <label for="">4</label>
-            </li>
-            <li class='right-corner'>
-              <input type="radio">
-              <label for="">5</label>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <p>BAÑOS</p>
-          <ul>
-            <li class='left-corner' id='selected'>
-              <input type="radio">
-              <label for="">Todos</label>
-            </li>
-            <li>
-              <input type="radio">
-              <label for="">1</label>
-            </li>
-            <li>
-              <input type="radio">
-              <label for="">2</label>
-            </li>
-            <li>
-              <input type="radio">
-              <label for="">3</label>
-            </li>
-            <li>
-              <input type="radio">
-              <label for="">4</label>
-            </li>
-            <li class='right-corner'>
-              <input type="radio">
-              <label for="">5</label>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </form>
-  </header>
-  <main>
-    <ul class='board'>
-      <li>
-        <article class='card'>
-          <div class='card__image'>
-            <img src='https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg' />
-            <div class='card__price'>
-              <p class='card__price-total'>280000 €</p>
-              <p>3000 €/m²</p>
-            </div>
-          </div>
-          <div class='card__title'>
-            <h3>Apartamento luminoso en el centro de Barcelona</h3>
-          </div>
-          <div class='card__features'>
+  <body>
+    <header>
+      <img class="logo" src="logo.png" />
+      <form action="">
+        <div class="navbar">
+          <input
+            class="navbar__input"
+            type="text"
+            placeholder="Introduce ciudad o barrio"
+          />
+          <button class="navbar__button">Buscar</button>
+        </div>
+        <div class="navbar__filters">
+          <section>
+            <p>PRECIO</p>
             <div>
-              <i class="fas fa-check-circle"></i>
-              <p>85 m²</p>
+              <select>
+                <option value="">Min €</option>
+                <option value="">0</option>
+                <option value="">25000</option>
+                <option value="">50000</option>
+                <option value="">75000</option>
+                <option value="">100000</option>
+              </select>
+              <p>-</p>
+              <select>
+                <option value="">Max €</option>
+                <option value="">0</option>
+                <option value="">25000</option>
+                <option value="">50000</option>
+                <option value="">75000</option>
+                <option value="">100000</option>
+              </select>
             </div>
-            <p>|</p>
+          </section>
+          <section>
+            <p>TAMAÑO</p>
             <div>
-              <i class="fas fa-bed"></i>
-              <p>2 habs.</p>
+              <select>
+                <option value="">Min m2</option>
+                <option value="">0</option>
+                <option value="">20</option>
+                <option value="">25</option>
+                <option value="">30</option>
+                <option value="">35</option>
+              </select>
+              <p>-</p>
+              <select>
+                <option value="">Max m2</option>
+                <option value="">0</option>
+                <option value="">20</option>
+                <option value="">25</option>
+                <option value="">30</option>
+                <option value="">35</option>
+              </select>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bath"></i>
-              <p>1 baños</p>
+          </section>
+          <section>
+            <p>HABITACIONES</p>
+            <ul>
+              <li class="left-corner" id="selected">
+                <input type="radio" />
+                <label for="">Todos</label>
+              </li>
+              <li>
+                <input type="radio" />
+                <label for="">1</label>
+              </li>
+              <li>
+                <input type="radio" />
+                <label for="">2</label>
+              </li>
+              <li>
+                <input type="radio" />
+                <label for="">3</label>
+              </li>
+              <li>
+                <input type="radio" />
+                <label for="">4</label>
+              </li>
+              <li class="right-corner">
+                <input type="radio" />
+                <label for="">5</label>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <p>BAÑOS</p>
+            <ul>
+              <li class="left-corner" id="selected">
+                <input type="radio" />
+                <label for="">Todos</label>
+              </li>
+              <li>
+                <input type="radio" />
+                <label for="">1</label>
+              </li>
+              <li>
+                <input type="radio" />
+                <label for="">2</label>
+              </li>
+              <li>
+                <input type="radio" />
+                <label for="">3</label>
+              </li>
+              <li>
+                <input type="radio" />
+                <label for="">4</label>
+              </li>
+              <li class="right-corner">
+                <input type="radio" />
+                <label for="">5</label>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </form>
+    </header>
+    <main>
+      <ul class="board">
+        <li>
+          <article class="card">
+            <div class="card__image">
+              <img
+                src="https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg"
+              />
+              <div class="card__price">
+                <p class="card__price-total">280000 €</p>
+                <p>3000 €/m²</p>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-      <li>
-        <article class='card'>
-          <div class='card__image'>
-            <img src='https://dywf8esi8sang.cloudfront.net/pictures/57daf8d649b3225824941b076c91bf58_large.jpg' />
-            <div class='card__price'>
-              <p class='card__price-total'>280000 €</p>
-              <p>3000 €/m²</p>
+            <div class="card__title">
+              <h3>Apartamento luminoso en el centro de Barcelona</h3>
             </div>
-          </div>
-          <div class='card__title'>
-            <h3>Apartamento luminoso en el centro de Barcelona</h3>
-          </div>
-          <div class='card__features'>
-            <div>
-              <i class="fas fa-check-circle"></i>
-              <p>85 m²</p>
+            <div class="card__features">
+              <div>
+                <i class="fas fa-check-circle"></i>
+                <p>85 m²</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bed"></i>
+                <p>2 habs.</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bath"></i>
+                <p>1 baños</p>
+              </div>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bed"></i>
-              <p>2 habs.</p>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <div class="card__image">
+              <img
+                src="https://dywf8esi8sang.cloudfront.net/pictures/57daf8d649b3225824941b076c91bf58_large.jpg"
+              />
+              <div class="card__price">
+                <p class="card__price-total">280000 €</p>
+                <p>3000 €/m²</p>
+              </div>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bath"></i>
-              <p>1 baños</p>
+            <div class="card__title">
+              <h3>Apartamento luminoso en el centro de Barcelona</h3>
             </div>
-          </div>
-        </article>
-      </li>
-      <li>
-        <article class='card'>
-          <div class='card__image'>
-            <img src='https://dywf8esi8sang.cloudfront.net/pictures/7340275e4759f674012aedf0c5e1d972_large.jpg' />
-            <div class='card__price'>
-              <p class='card__price-total'>280000 €</p>
-              <p>3000 €/m²</p>
+            <div class="card__features">
+              <div>
+                <i class="fas fa-check-circle"></i>
+                <p>85 m²</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bed"></i>
+                <p>2 habs.</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bath"></i>
+                <p>1 baños</p>
+              </div>
             </div>
-          </div>
-          <div class='card__title'>
-            <h3>Apartamento luminoso en el centro de Barcelona</h3>
-          </div>
-          <div class='card__features'>
-            <div>
-              <i class="fas fa-check-circle"></i>
-              <p>85 m²</p>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <div class="card__image">
+              <img
+                src="https://dywf8esi8sang.cloudfront.net/pictures/7340275e4759f674012aedf0c5e1d972_large.jpg"
+              />
+              <div class="card__price">
+                <p class="card__price-total">280000 €</p>
+                <p>3000 €/m²</p>
+              </div>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bed"></i>
-              <p>2 habs.</p>
+            <div class="card__title">
+              <h3>Apartamento luminoso en el centro de Barcelona</h3>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bath"></i>
-              <p>1 baños</p>
+            <div class="card__features">
+              <div>
+                <i class="fas fa-check-circle"></i>
+                <p>85 m²</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bed"></i>
+                <p>2 habs.</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bath"></i>
+                <p>1 baños</p>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-      <li>
-        <article class='card'>
-          <div class='card__image'>
-            <img src='https://dywf8esi8sang.cloudfront.net/pictures/c52330d8300134832024aa39acd0e076_large.jpg' />
-            <div class='card__price'>
-              <p class='card__price-total'>280000 €</p>
-              <p>3000 €/m²</p>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <div class="card__image">
+              <img
+                src="https://dywf8esi8sang.cloudfront.net/pictures/c52330d8300134832024aa39acd0e076_large.jpg"
+              />
+              <div class="card__price">
+                <p class="card__price-total">280000 €</p>
+                <p>3000 €/m²</p>
+              </div>
             </div>
-          </div>
-          <div class='card__title'>
-            <h3>Apartamento luminoso en el centro de Barcelona</h3>
-          </div>
-          <div class='card__features'>
-            <div>
-              <i class="fas fa-check-circle"></i>
-              <p>85 m²</p>
+            <div class="card__title">
+              <h3>Apartamento luminoso en el centro de Barcelona</h3>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bed"></i>
-              <p>2 habs.</p>
+            <div class="card__features">
+              <div>
+                <i class="fas fa-check-circle"></i>
+                <p>85 m²</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bed"></i>
+                <p>2 habs.</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bath"></i>
+                <p>1 baños</p>
+              </div>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bath"></i>
-              <p>1 baños</p>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <div class="card__image">
+              <img
+                src="https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg"
+              />
+              <div class="card__price">
+                <p class="card__price-total">280000 €</p>
+                <p>3000 €/m²</p>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-      <li>
-        <article class='card'>
-          <div class='card__image'>
-            <img src='https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg' />
-            <div class='card__price'>
-              <p class='card__price-total'>280000 €</p>
-              <p>3000 €/m²</p>
+            <div class="card__title">
+              <h3>Apartamento luminoso en el centro de Barcelona</h3>
             </div>
-          </div>
-          <div class='card__title'>
-            <h3>Apartamento luminoso en el centro de Barcelona</h3>
-          </div>
-          <div class='card__features'>
-            <div>
-              <i class="fas fa-check-circle"></i>
-              <p>85 m²</p>
+            <div class="card__features">
+              <div>
+                <i class="fas fa-check-circle"></i>
+                <p>85 m²</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bed"></i>
+                <p>2 habs.</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bath"></i>
+                <p>1 baños</p>
+              </div>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bed"></i>
-              <p>2 habs.</p>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <div class="card__image">
+              <img
+                src="https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg"
+              />
+              <div class="card__price">
+                <p class="card__price-total">280000 €</p>
+                <p>3000 €/m²</p>
+              </div>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bath"></i>
-              <p>1 baños</p>
+            <div class="card__title">
+              <h3>Apartamento luminoso en el centro de Barcelona</h3>
             </div>
-          </div>
-        </article>
-      </li>
-      <li>
-        <article class='card'>
-          <div class='card__image'>
-            <img src='https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg' />
-            <div class='card__price'>
-              <p class='card__price-total'>280000 €</p>
-              <p>3000 €/m²</p>
+            <div class="card__features">
+              <div>
+                <i class="fas fa-check-circle"></i>
+                <p>85 m²</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bed"></i>
+                <p>2 habs.</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bath"></i>
+                <p>1 baños</p>
+              </div>
             </div>
-          </div>
-          <div class='card__title'>
-            <h3>Apartamento luminoso en el centro de Barcelona</h3>
-          </div>
-          <div class='card__features'>
-            <div>
-              <i class="fas fa-check-circle"></i>
-              <p>85 m²</p>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <div class="card__image">
+              <img
+                src="https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg"
+              />
+              <div class="card__price">
+                <p class="card__price-total">280000 €</p>
+                <p>3000 €/m²</p>
+              </div>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bed"></i>
-              <p>2 habs.</p>
+            <div class="card__title">
+              <h3>Apartamento luminoso en el centro de Barcelona</h3>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bath"></i>
-              <p>1 baños</p>
+            <div class="card__features">
+              <div>
+                <i class="fas fa-check-circle"></i>
+                <p>85 m²</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bed"></i>
+                <p>2 habs.</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bath"></i>
+                <p>1 baños</p>
+              </div>
             </div>
-          </div>
-        </article>
-      </li>
-      <li>
-        <article class='card'>
-          <div class='card__image'>
-            <img src='https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg' />
-            <div class='card__price'>
-              <p class='card__price-total'>280000 €</p>
-              <p>3000 €/m²</p>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <div class="card__image">
+              <img
+                src="https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg"
+              />
+              <div class="card__price">
+                <p class="card__price-total">280000 €</p>
+                <p>3000 €/m²</p>
+              </div>
             </div>
-          </div>
-          <div class='card__title'>
-            <h3>Apartamento luminoso en el centro de Barcelona</h3>
-          </div>
-          <div class='card__features'>
-            <div>
-              <i class="fas fa-check-circle"></i>
-              <p>85 m²</p>
+            <div class="card__title">
+              <h3>Apartamento luminoso en el centro de Barcelona</h3>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bed"></i>
-              <p>2 habs.</p>
+            <div class="card__features">
+              <div>
+                <i class="fas fa-check-circle"></i>
+                <p>85 m²</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bed"></i>
+                <p>2 habs.</p>
+              </div>
+              <p>|</p>
+              <div>
+                <i class="fas fa-bath"></i>
+                <p>1 baños</p>
+              </div>
             </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bath"></i>
-              <p>1 baños</p>
-            </div>
-          </div>
-        </article>
-      </li>
-      <li>
-        <article class='card'>
-          <div class='card__image'>
-            <img src='https://dywf8esi8sang.cloudfront.net/pictures/cbc4256f93c4ca47e7372336daf43e3e_large.jpg' />
-            <div class='card__price'>
-              <p class='card__price-total'>280000 €</p>
-              <p>3000 €/m²</p>
-            </div>
-          </div>
-          <div class='card__title'>
-            <h3>Apartamento luminoso en el centro de Barcelona</h3>
-          </div>
-          <div class='card__features'>
-            <div>
-              <i class="fas fa-check-circle"></i>
-              <p>85 m²</p>
-            </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bed"></i>
-              <p>2 habs.</p>
-            </div>
-            <p>|</p>
-            <div>
-              <i class="fas fa-bath"></i>
-              <p>1 baños</p>
-            </div>
-          </div>
-        </article>
-      </li>
-    </ul>
-  </main>
-</body>
-
+          </article>
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>
